@@ -185,6 +185,11 @@
                                         justTheTags.push(data[i]["snippet"]);
                                     }
                                     console.log( justTheTags);
+
+                                    // In case no captions are found for given image.
+                                    if (justTheTags.length == 0) {
+                                        justTheTags = ["No captions found."];
+                                    }
                                     $scope.$apply(function() {
                                         $scope.tags = justTheTags;
                                         console.log($scope.tags);
