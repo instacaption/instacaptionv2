@@ -157,23 +157,30 @@
                             'wHIFmkeN4zK0u-9fbniBuBuRvr46iqH90Qm6TpHR', // id
                             'oXH7OBXjkHkxUprD-1ldyof2Q29WU76xaAkeBLFw' // secret
                         );
-                        
+
 
                         app.models.predict(Clarifai.GENERAL_MODEL, {base64: srcData}).then(
                             function (response) {
                                 var temp = [];
+                                var values = [];
                                 var results = response["data"]["outputs"][0]["data"]["concepts"];
                                 for (i = 0; i < results.length; i++) {
                                     temp.push(results[i]["name"]);
+                                    values.push(results[i]["value"]);
                                 }
-
-                                console.log(temp);
+                                // console.log(temp);
                                 // 'http://api.lyricsnmusic.com/songs?api_key=e64c151037a51ee6eec671e3020a46&lyrics=Trains%20railways'
                                 var urlTags = "http://api.lyricsnmusic.com/songs?api_key=e64c151037a51ee6eec671e3020a46&lyrics=" + temp[0];
-                                for(i=1; i < 4; i++) {
+                                var count = 1;
+                                for(i=1; i < temp.length; i++) {
                                     //console.log(temp[i]);
-                                    urlTags += "%20" + temp[i];
-                                }    
+                                    if(values[i] > 0.9 && count < 3) {
+                                        count++;
+                                        urlTags += "%20" + temp[i];
+                                        console.log(temp[i]);
+                                        console.log(values[i]);
+                                    }
+                                }
                                 urlTags = urlTags.replace(/\s+/g, '')
 
                                 //console.log(urlTags);
@@ -195,13 +202,13 @@
                                         console.log($scope.tags);
                                     });
                                 });
-                                
+
                                 var appElement = document.querySelector('[ng-app=app1]');
                                 var $scope = angular.element(appElement).scope();
                                 console.log(justTheTags);
-                                
-                                
-                                
+
+
+
                             },
                             function (err) {
                                 console.error(err);
