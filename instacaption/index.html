@@ -180,9 +180,27 @@
                                 var justTheTags = [];
                                 $.getJSON(urlTags, function(data) {
                                     //data is the JSON string
-                                    for(i=0; i < data.length; i++) {
+                                    for(i=0; i < 8; i++) {
                                         //console.log(data[i]["snippet"]);
-                                        justTheTags.push(data[i]["snippet"]);
+                                        
+                                        if (data[i]["snippet"].indexOf("(") == -1) {
+
+
+                                        
+                                            var index = data[i]["snippet"].indexOf("\n");
+                                            console.log("new one: " + data[i]["snippet"].substring(0, index));
+                                            var newString = data[i]["snippet"].substring(index + 1);
+                                            //console.log("rest of line: " + newString);
+                                            var index2 = newString.indexOf("\n");
+                                            console.log("second line: " + newString.substring(0, index2));
+                                            //var snip = data[i]["snippet"].split("\n");
+                         
+                                            //console.log(snip[0]);
+                                            justTheTags.push(data[i]["snippet"].substring(0, index) + " / " + newString.substring(0, index2));
+                                            //justTheTags.push(newString.substring(0, index2));
+                                        }
+                                        
+                                        //justTheTags.push(data[i]["snippet"]);
                                     }
                                     console.log( justTheTags);
                                     $scope.$apply(function() {
