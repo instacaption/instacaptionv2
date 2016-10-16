@@ -217,6 +217,13 @@
             while (node.hasChildNodes()) {
                 node.removeChild(node.lastChild);
             }
+            var appElement = document.querySelector('[ng-app=app1]');
+            var $scope = angular.element(appElement).scope();
+            $scope.$apply(function() {
+                $scope.tags = ["LOADING"];
+                console.log($scope.tags);
+            });                    
+            // get scope, set tags to loading
         }
     </script>
 
