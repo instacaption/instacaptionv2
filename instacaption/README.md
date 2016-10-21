@@ -1,27 +1,24 @@
-# [Start Bootstrap](http://startbootstrap.com/) - [Portfolio Item](http://startbootstrap.com/template-overviews/portfolio-item/)
+# [Instacaption](https://htmlpreview.github.io/?https://github.com/instacaption/instacaptionv2/blob/master/instacaption/index.html) - [A musical image caption generator]
 
-[Portfolio Item](http://startbootstrap.com/template-overviews/portfolio-item/) is an individual portfolio item template for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
+With InstaCaption, you'll never have to ponder over captions again. This web application generates Instagram captions in the form of song lyrics. It analyzes a given photo and based on the photo's content, will generate applicable captions. Instacaption generates a variety of options so that you can choose the lyrics that you like best.
 
-## Getting Started
+## Built with
 
-To begin using this template, choose one of the following options to get started:
-* [Download the latest release on Start Bootstrap](http://startbootstrap.com/template-overviews/portoflio-item/)
-* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-portoflio-item.git`
-* Fork the repo
+Instacaption was made possible with the following technologies 
+* [Clarafai API](https://www.clarifai.com/)
+* [Lyricsnmusic API](http://www.lyricsnmusic.com/api)
+* HTMl/CSS
+* Javascript
 
-## Bugs and Issues
+## Creators
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-portoflio-item/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/portoflio-item/).
+Start Bootstrap was created by five University of Washington students for Dubhacks 2016
+* Alex Banh
+* Allison Chou
+* Varun Viswanath
+* Katherine Choi
+* Howard Yang
 
-## Creator
+## Notes
 
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
-
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
-
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
-
-## Copyright and License
-
-Copyright 2013-2016 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-portoflio-item/blob/gh-pages/LICENSE) license.
+Lyrics may be slow to load depending on the status of the Lyricsnmusic API!
