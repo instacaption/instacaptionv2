@@ -1,4 +1,4 @@
-# [Instacaption](https://htmlpreview.github.io/?https://github.com/instacaption/instacaptionv2/blob/master/instacaption/index.html) - [A musical image caption generator]
+# [Instacaption](https://htmlpreview.github.io/?https://github.com/instacaption/instacaptionv2/blob/master/instacaption/index.html) - A musical image caption generator
 
 With InstaCaption, you'll never have to ponder over captions again. This web application generates Instagram captions in the form of song lyrics. It analyzes a given photo and based on the photo's content, will generate applicable captions. Instacaption generates a variety of options so that you can choose the lyrics that you like best.
 
